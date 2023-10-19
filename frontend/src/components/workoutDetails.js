@@ -10,7 +10,7 @@ if (!user){
     return
 }
 
-const response=await fetch('http://localhost:1000/api/workouts/' + workout._id,{
+const response=await fetch('https://workout-api-ty4i.onrender.com/api/workouts/' + workout._id,{
     method:'DELETE',
     headers:{
          "Authorization":`Bearer ${user.token}`
