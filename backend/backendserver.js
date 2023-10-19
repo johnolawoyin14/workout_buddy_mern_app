@@ -17,10 +17,10 @@ app.use(morgan("dev"));
 
 app.use('/api/workouts',workoutRoutes)
 app.use('/api/user',userRoutes)
-const dbUrl = process.env.DATABASE;
+const dbUrl = mongodb+srv://<credentials>@cluster0.ovzu5x7.mongodb.net/?retryWrites=true&w=majority/workouts;
 mongoose
   .connect(dbUrl)
-  .then((result) => app.listen(process.env.PORT, () => console.log("connected",1000)))
+  .then((result) => app.listen(1000, () => console.log("connected",1000)))
   .catch((err) => console.log(err));
 
 
