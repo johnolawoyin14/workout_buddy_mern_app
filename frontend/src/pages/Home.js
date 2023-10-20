@@ -14,6 +14,7 @@ const [len,setLen]=useState(false)
     useEffect(()=>{
         const fetchWorkouts=async ()=>{
             const response = await fetch("https://workout-api-ty4i.onrender.com/api/workouts",{
+                method:"GET",
                 headers:{
                     "Authorization":`Bearer ${user.token}`
                 }
