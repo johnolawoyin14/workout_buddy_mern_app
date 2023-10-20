@@ -17,7 +17,7 @@ app.use(morgan("dev"));
 
 app.use('/api/workouts',workoutRoutes)
 app.use('/api/user',userRoutes)
-const dbUrl = "mongodb+srv://johnsegs:Johnsegs123@cluster0.ovzu5x7.mongodb.net/?retryWrites=true&w=majority/workouts";
+const dbUrl = "mongodb+srv://johnsegs:Johnsegs123@cluster0.ovzu5x7.mongodb.net/?retryWrites=true&w=majority";
 mongoose
   .connect(dbUrl)
   .then((result) => app.listen(1000, () => console.log("connected",1000)))
